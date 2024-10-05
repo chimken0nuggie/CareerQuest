@@ -17,11 +17,11 @@ export default function Home() {
                     <div>
                         <div style={{backgroundColor:'ghostwhite', borderRadius: '10px', borderStyle: 'solid', borderWidth: '2px',
                                     boxSizing: 'border-box', padding: '20px'}}>
-                            <h2 style={{color: 'black', margin: '0px' }}>
+                            <h2 style={{color: 'dimgray', margin: '0px' }}>
                                 LEVEL 1
                             </h2>
                             <ProgressBar percentCompleted={50}/>
-                            <h3 style={{color: 'silver', fontSize: '15px', margin: '0px', marginBottom: '0px'}}>
+                            <h3 style={{color: 'dimgray', fontSize: '15px', margin: '0px', marginBottom: '0px'}}>
                                 500/1000 XP
                             </h3>
                         </div>
@@ -31,7 +31,7 @@ export default function Home() {
             <div style={{display: 'flex', flexDirection: 'column', marginBottom: '20px'}}>
                 <Heading title="Careers"/>
                 <p style={{margin: '0px'}}>Pick your career path!</p>
-                <div style={{width: '100%', margin: '20px', marginTop: '30px',
+                <div style={{width: '100%', marginTop: '30px',
                         display: 'flex', flexDirection: 'row', flexWrap: 'wrap',
                         justifyContent: 'space-evenly', alignItems:'flex-start'}}>
                     <CareerItem title="Software" des="help ajsdf a dsfdoo d sdsdoisd d sdsddid sa dosdoids"/>
