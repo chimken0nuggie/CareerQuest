@@ -9,24 +9,24 @@ export default function Home() {
         <div className='PageContent' style={{width: '100%', height: '15vh', display: 'flex', flexDirection: 'column', alignItems: 'center', margin: '10px'}}>
         <div style={{display: 'flex', flexDirection: 'column', margin: '20px 0px'}}>
             <ProjectName/>
-                <Heading title="Name"/>
-                <div style={{width: '100%', height: 'auto', margin: '20px 40px', 
-                            display: 'flex', flexDirection: 'row', flexWrap: 'wrap',
-                            alignItems: 'center', justifyContent: 'space-evenly'}}>
-                    <div style={{backgroundColor: 'ghostwhite', width: '300px', height: "100px", margin: '20px 0px'}}>A character</div>
-                    <div>
-                        <div style={{backgroundColor:'ghostwhite', borderRadius: '10px', borderStyle: 'solid', borderWidth: '2px',
-                                    boxSizing: 'border-box', padding: '20px'}}>
-                            <h2 style={{color: 'dimgray', margin: '0px' }}>
-                                LEVEL 1
-                            </h2>
-                            <ProgressBar percentCompleted={50}/>
-                            <h3 style={{color: 'dimgray', fontSize: '15px', margin: '0px', marginBottom: '0px'}}>
-                                500/1000 XP
-                            </h3>
-                        </div>
+            <Heading title="Name"/>
+            <div style={{width: '100%', height: 'auto', margin: '20px 40px', 
+                        display: 'flex', flexDirection: 'row', flexWrap: 'wrap',
+                        alignItems: 'center', justifyContent: 'space-evenly'}}>
+                <div style={{backgroundColor: 'ghostwhite', width: '300px', height: "100px", margin: '20px 0px'}}>A character</div>
+                <div>
+                    <div style={{backgroundColor:'ghostwhite', borderRadius: '10px', borderStyle: 'solid', borderWidth: '2px',
+                                boxSizing: 'border-box', padding: '20px'}}>
+                        <h2 style={{color: 'dimgray', margin: '0px' }}>
+                            LEVEL 1
+                        </h2>
+                        <ProgressBar percentCompleted={50}/>
+                        <h3 style={{color: 'dimgray', fontSize: '15px', margin: '0px', marginBottom: '0px'}}>
+                            500/1000 XP
+                        </h3>
                     </div>
                 </div>
+            </div>
             </div>
             <div style={{display: 'flex', flexDirection: 'column', marginBottom: '20px'}}>
                 <Heading title="Careers"/>
