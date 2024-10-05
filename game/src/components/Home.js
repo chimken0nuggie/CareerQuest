@@ -5,8 +5,12 @@ import Heading from "../miniComponents/Heading";
 import ProgressBar from "../miniComponents/ProgressBar";
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { Link } from 'react-router-dom';
+import Overlay from "../miniComponents/Overlay";
+import { useState } from "react";
 
 export default function Home() {
+
+    const [overlay, setOverlay] = useState(false);
 
     return(
         <div className='PageContent' style={{width: '100%', height: '15vh', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
@@ -14,7 +18,7 @@ export default function Home() {
             <div className='Content' style={{display: 'flex', flexDirection: 'column'}}>
                 <Heading title="Name"/>
                 <div className='CharacterAndPlayerInfo' style={{width: '100%', height: 'auto', margin: '20px 40px', 
-                            display: 'flex', flexDirection: 'row', flexWrap: 'wrap',
+                            display: 'flex', flexDirection: 'row', flexWrap: 'wrap', 
                             alignItems: 'center', justifyContent: 'space-evenly', gap: '10px'}}>
                     <div className='Character' style={{backgroundColor: 'dimgray', width: '300px', height: "300px"}}></div>
                     <div className="Player Info" style={{display: 'flex', flexDirection: 'column', gap:'15px'}}>
@@ -56,6 +60,10 @@ export default function Home() {
                     <CareerItem title="Lawyer" des="Study the law to help clients solve their issues and protect their rights."/>
                 </div>
             </div>
+            {overlay && (
+                <div className="overlay" onClick={() => setOverlay(false)}></div>
+            )}
+            {overlay && <Overlay/>}
         </div>
     );
 };

@@ -101,3 +101,32 @@
     transform: rotate(360deg);
   }
 }
+
+.main-container {
+  background-color: rgb(46 56 77 / 30%);
+}
+
+.modal-container {
+  width: 70%;
+  height: 80%;
+  gap: 20px;
+  pointer-events: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: 1px solid var(--gh-grey-4);
+  border-radius: 4px;
+  outline: 0;
+  padding: 8px 24px;
+  margin: 0 auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999; /* Set a high z-index value */
+} 
+
