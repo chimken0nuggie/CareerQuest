@@ -1,30 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
-import Home from "./components/Home";
-import Game from "./components/Game";
-import Lesson from "./components/Lesson";
-import Greeting from "./components/Greeting";
-import QA from "./components/QA";
 import React from 'react';
+import Lesson from './components/Lesson';
+import './App.css';
 
 function App() {
-  return (
-    <Router>
-      <div className="App">
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/greeting" element={<Greeting/>}/>
-        <Route path="/lesson" element={<Lesson/>}/>
-        <Route path="/game" element={<Game/>}/>
-        <Route path="/qa" element={<QA/>}/>
-      </Routes>
-      </div>
-      
-    </Router>
-    
-    
-  );
+    return (
+        <div className="App">
+            <header className="App-header">
+                <h1>Your Answer is wrong lets do some practice!</h1>
+            </header>
+            <Lesson />
+        </div>
+    );
 }
 
 export default App;
+
