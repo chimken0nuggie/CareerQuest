@@ -3,7 +3,7 @@ import React from 'react';
 const CareerItem = ({title, des}) => {
     return (
         <div style={{backgroundColor: 'ghostwhite', width: '200px', height: 'auto', 
-                    padding: "10px", margin: '10px',
+                    padding: "10px", margin: '10px 20px',
                     display: 'flex', flexDirection: 'column', 
                     alignItems: 'center', borderRadius: '10px', 
                     borderStyle: 'solid', borderWidth: '2px'}}>
