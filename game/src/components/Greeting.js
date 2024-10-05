@@ -1,6 +1,7 @@
 import Heading from "../miniComponents/Heading";
 import Button from "../miniComponents/Button";
 import AppHeader from "../miniComponents/AppHeader";
+import { Link } from 'react-router-dom';
 
 function Greeting() {
     return (
@@ -30,8 +31,12 @@ function Greeting() {
                     <div className="buttons" style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap',
                                                     justifyContent: 'space-evenly', margin: '5px'
                     }}>
-                        <Button title='Start'/>
-                        <Button title='Cancel'/>
+                        <Link to="/lesson" style={{textDecoration:'none', color:'inherit'}}>
+                            <Button title='Start'/>
+                        </Link>
+                        <Link to="/" style={{textDecoration:'none', color:'inherit'}}>
+                            <Button title='Cancel'/>
+                        </Link>
                     </div>
                 </div>
             </div>

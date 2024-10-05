@@ -38,6 +38,15 @@
   flex-direction: row;
 }
 
+.button{
+  background-color: ghostwhite;
+  box-shadow: 3px 3px lightgray;
+}
+
+.button:hover {
+  background-color: lightgray;
+}
+
 /* Progress bar */
 .progressContainer{
   width: 100%;
