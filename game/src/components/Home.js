@@ -47,10 +47,10 @@ export default function Home() {
                 <div className='CareerList' style={{width: '100%', marginTop: '20px', marginBottom:'50px',
                         display: 'flex', flexDirection: 'row', flexWrap: 'wrap',
                         justifyContent: 'space-evenly', alignItems:'flex-start'}}>
-                    <CareerItem title="Software" des="help adsifi sda dsoidkf aosdihwo dsfjaod d aokdjfh"/>
-                    <CareerItem title="Doctor" des="help1 adsifi sda dsoidkf aosdihwo dsfjaod d aokdjfh"/>
-                    <CareerItem title="Teacher" des="help2 adsifi sda dsoidkf aosdihwo dsfjaod d aokdjfh"/>
-                    <CareerItem title="Lawyer" des="help3 adsifi sda dsoidkf aosdihwo dsfjaod d aokdjfh"/>
+                    <CareerItem title="Software" des="Solve real-world problems to improve people's lives."/>
+                    <CareerItem title="Doctor" des="Help clients stay healthy and feel better when they are sick."/>
+                    <CareerItem title="Teacher" des="Educate and support students so they can help change the world."/>
+                    <CareerItem title="Lawyer" des="Study the law to help clients solve their issues and protect their rights."/>
                 </div>
             </div>
         </div>
