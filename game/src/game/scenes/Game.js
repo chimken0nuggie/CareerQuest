@@ -319,6 +319,7 @@ export class Game extends Scene {
         player.setTint(0xff0000);  // Turn player red
         player.anims.play('turn');
         this.gameOver = true;
+        // EDIT CODE HERE: routing to lesson
     }
 
     update() {
