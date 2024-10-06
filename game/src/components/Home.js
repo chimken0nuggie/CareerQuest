@@ -3,14 +3,13 @@ import Badge from "../miniComponents/Badge";
 import CareerItem from "../miniComponents/CareerItem";
 import Heading from "../miniComponents/Heading";
 import ProgressBar from "../miniComponents/ProgressBar";
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { Link } from 'react-router-dom';
 import Overlay from "../miniComponents/Overlay";
 import { useState } from "react";
 
 export default function Home() {
 
-    const [overlay, setOverlay] = useState(true);
+    const [overlay, setOverlay] = useState(false);
 
     return(
         <div className='PageContent' style={{width: '100%', height: '15vh', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
@@ -24,23 +23,22 @@ export default function Home() {
                     <div className="Player Info" style={{display: 'flex', flexDirection: 'column', gap:'15px'}}>
                         <div className='PlayerStats' style={{backgroundColor:'ghostwhite', borderRadius: '10px', borderStyle: 'solid', borderWidth: '2px',
                                     boxSizing: 'border-box', padding: '10px'}}>
-                            <h2 style={{color: 'dimgray', margin: '0px' }}>
+                            <h2 style={{color: 'dimgray', margin: '0px', fontSize:'30px'}}>
                                 LEVEL 1
                             </h2>
                             <ProgressBar percentCompleted={50}/>
-                            <h3 style={{color: 'dimgray', fontSize: '15px', margin: '0px', marginBottom: '0px'}}>
+                            <h3 style={{color: 'dimgray', fontSize: '20px', margin: '0px', marginBottom: '0px'}}>
                                 500/1000 XP
                             </h3>
                         </div>
                         <div className="BadgesSection" style={{display: 'flex', flexDirection:'column', gap: '10px'}}>
-                            <h2 style={{color: 'dimgray', margin: '0px' }}>BADGES</h2>
+                            <h2 style={{color: 'dimgray', margin: '0px', fontSize:'30px' }}>BADGES</h2>
                             <div className="BadgesList" style={{width:'100%', display:'flex', flexDirection: 'row',
                                                                 flexWrap: 'wrap', gap: '10px', alignItems: 'center'
                             }}>
                                 <Badge title='Step by Step' description='Started first career'/>
                                 <Badge title='First Payday' description='Got paid $10 from the boss'/>
                                 <Badge title='Hard Worker' description='Completed 5 tasks'/>
-                                <ChevronRightIcon/>
                             </div>
                         </div>
                     </div>
@@ -48,7 +46,7 @@ export default function Home() {
             </div>
             <div className='CareerSection' style={{display: 'flex', flexDirection: 'column'}}>
                 <Heading title="Careers"/>
-                <p style={{margin: '0px'}}>Pick your career path!</p>
+                <p style={{margin: '0px', fontSize:'20px'}}>Pick your career path!</p>
                 <div className='CareerList' style={{width: '100%', marginTop: '20px', marginBottom:'50px',
                         display: 'flex', flexDirection: 'row', flexWrap: 'wrap',
                         justifyContent: 'space-evenly', alignItems:'flex-start'}}>
