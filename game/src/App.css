@@ -103,7 +103,12 @@
 }
 
 .main-container {
-  background-color: rgb(46 56 77 / 30%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(46, 56, 77, 0.4);
 }
 
 .modal-container {

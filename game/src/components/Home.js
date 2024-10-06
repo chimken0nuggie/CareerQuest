@@ -10,7 +10,7 @@ import { useState } from "react";
 
 export default function Home() {
 
-    const [overlay, setOverlay] = useState(false);
+    const [overlay, setOverlay] = useState(true);
 
     return(
         <div className='PageContent' style={{width: '100%', height: '15vh', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
