@@ -2,25 +2,26 @@ import Heading from "../miniComponents/Heading";
 import Button from "../miniComponents/Button";
 import AppHeader from "../miniComponents/AppHeader";
 import { Link } from 'react-router-dom';
+import software from "../images/boy-software.png"
 
 function Greeting() {
     return (
         <div className='PageContent' style={{display: 'flex', flexDirection: 'column', 
                                             alignItems: 'center'}}>
             <AppHeader/>
-            <div className="occupation-avatar" style={{width: '80%', height:'auto', marginTop: '10px', 
+            <div className="occupation-avatar" style={{margin: '10px 10px', 
                                                         display: 'flex', flexDirection: 'row', flexWrap: 'wrap',
-                                                        justifyContent: 'center', gap: '15px'
+                                                        justifyContent: 'center', alignItems:'center'
             }} >
-                <div className="left-content" style={{backgroundColor: 'dimgray', width: '300px', height: '420px', 
-                                                    marginRight: '20px', marginTop: '20px'}} >
-
+                <div style={{justifyContent:'center', alignItems:'center'}}>
+                    <img src={software}  alt="image" style={{width: '300px'}}/>
                 </div>
-                <div className="right-content" style={{display: 'flex', flexDirection: 'column', margin: '5px 30px 30px 30px', flexGrow: '1',  width: '300px',
+                
+                <div className="right-content" style={{display: 'flex', flexDirection: 'column', margin: '5px 30px 30px 30px', width: '800px',
                 }}>
                      <Heading title="Introduction"/>
-                    <div className="intro message" style={{backgroundColor: 'ghostwhite', margin: '10px 0px', textAlign: 'left', padding: '15px',
-                                                            height: '250px', borderStyle: 'solid', borderWidth: '2px', borderRadius: '10px', fontSize: '18px'
+                    <div className="intro message" style={{backgroundColor: 'ghostwhite', margin: '10px 0px', textAlign: 'left', padding: '15px', width:'100%',
+                                                            height: '250px', borderStyle: 'solid', borderWidth: '2px', borderRadius: '10px', fontSize: '20px'
                     }}>
                         <p>Welcome to the software world!</p>
                         <p>As a software engineer, you will be solving many coding problems in order to solve even bigger problems 

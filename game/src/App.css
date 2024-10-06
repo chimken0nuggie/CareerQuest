@@ -38,13 +38,49 @@
   flex-direction: row;
 }
 
-.button{
+.aButton {
   background-color: ghostwhite;
   box-shadow: 3px 3px lightgray;
 }
 
-.button:hover {
+.aButton:hover {
   background-color: lightgray;
+}
+
+.CareerButton {
+  background-color: ghostwhite;
+  box-shadow: 3px 3px lightgray;
+  width: 300px;
+  height: auto; 
+  padding: 15px 0px;
+  margin: 10px 20px;
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px; 
+  border-style: solid;
+  border-width: 2px;
+}
+
+.CareerButton:hover {
+  background-color: lightgray;
+}
+
+.CareerButtonTitle {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.CareerButtonImg {
+  display:block; 
+  width: 100px;
+}
+
+.CareerButtonDes {
+  font-size: 18px;
+  width: 80%;
+  text-align: left;
 }
 
 /* Progress bar */
