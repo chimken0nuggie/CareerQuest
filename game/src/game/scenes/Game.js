@@ -214,7 +214,7 @@ export class Game extends Scene {
             // Generate the text answers for the next question in the same position as before
             var t1 = this.add.text(212 - this.QA[this.index].answers[0].text.length * 5+ pad, 110, this.QA[this.index].answers[0].text, { fontSize: '25px', fill: '#000' });
             var t2 = this.add.text(600 - this.QA[this.index].answers[1].text.length * 5+ pad, 580, this.QA[this.index].answers[1].text, { fontSize: '25px', fill: '#000' });
-            var t3 = this.add.text(816 - this.QA[this.index].answers[2].text.length * 5+ pad, 280, this.QA[this.index].answers[2].text, { fontSize: '25px', fill: '#000' });
+            var t3 = this.add.text(816 - this.QA[this.index].answers[2].text.length * 5+ pad - 50, 280, this.QA[this.index].answers[2].text, { fontSize: '25px', fill: '#000' });
 
             this.answers.add(t1);
             this.answers.add(t2);
