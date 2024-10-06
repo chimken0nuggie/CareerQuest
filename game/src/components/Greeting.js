@@ -32,7 +32,7 @@ function Greeting() {
                     <div className="buttons" style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap',
                                                     justifyContent: 'space-evenly', margin: '5px'
                     }}>
-                        <Link to="/lesson" style={{textDecoration:'none', color:'inherit'}}>
+                        <Link to="/game" style={{textDecoration:'none', color:'inherit'}}>
                             <Button title='Start'/>
                         </Link>
                         <Link to="/" style={{textDecoration:'none', color:'inherit'}}>

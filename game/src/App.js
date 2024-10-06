@@ -17,7 +17,6 @@ function App() {
         <Route path="/greeting" element={<Greeting/>}/>
         <Route path="/lesson" element={<Lesson/>}/>
         <Route path="/game" element={<Game/>}/>
-        <Route path="/qa" element={<QA/>}/>
       </Routes>
       </div>
       
