@@ -1,5 +1,6 @@
 import React from 'react';
-import './Lesson.css';  // Ensure that styles for the lesson are encapsulated
+import './Lesson.css';  // Ensure that styles for the lesson are encapsulated Done
+
 
 const LessonBox = ({ lesson }) => {
   return (
@@ -11,5 +12,4 @@ const LessonBox = ({ lesson }) => {
 }
 
 export default LessonBox;
-
 

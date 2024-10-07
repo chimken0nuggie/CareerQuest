@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios';
 import ReactMarkdown from 'react-markdown';
-import LessonBox from './components/LessonBox'; // Import LessonBox component
-import PrintlnVisual from './PrintlnVisual'; // Ensure PrintlnVisual is used for code editor and console
+import LessonBox from './components/LessonBox';
+import PrintlnVisual from './miniComponents/PrintlnVisual';  // Ensure the correct path to PrintlnVisual
 
-function App() {
+function AIapp() {
   const [question, setQuestion] = useState('');  // Store the question
   const [lesson, setLesson] = useState('');      // Store the lesson or hint
   const [answer, setAnswer] = useState('');      // User's answer
@@ -13,22 +13,25 @@ function App() {
   const [loading, setLoading] = useState(true);  // Loading state
   const [consoleOutput, setConsoleOutput] = useState('');  // Console output
   const [correctAnswer, setCorrectAnswer] = useState('');  // Correct answer (hidden from user)
+  const [error, setError] = useState(null);  // Error state
 
   // Fetch a new question from the backend
   const fetchQuestion = async () => {
-    setLoading(true);  // Show loading while fetching
+    setLoading(true);
+    setError(null);
     try {
       const response = await axios.post('http://localhost:5001/api/get-question');
-      setQuestion(response.data.question);        // Update the question
-      setLesson(response.data.lesson);            // Update the lesson
-      setCorrectAnswer(response.data.correct_answer);  // Store the correct answer
-      setFeedback('');                            // Reset feedback
-      setAnswer('');                              // Clear answer input
-      setConsoleOutput('');                       // Clear console output
+      setQuestion(response.data.question);
+      setLesson(response.data.lesson);
+      setCorrectAnswer(response.data.correct_answer);
+      setFeedback('');
+      setAnswer('');
+      setConsoleOutput('');
     } catch (error) {
       console.error('Error fetching question:', error);
+      setError('Failed to load a question. Please ensure the backend is running.');
     } finally {
-      setLoading(false);  // Stop loading
+      setLoading(false);
     }
   };
 
@@ -40,22 +43,22 @@ function App() {
         correct_answer: correctAnswer,
         question: question
       });
-      setFeedback(response.data.feedback);  // Update feedback
+      setFeedback(response.data.feedback);
 
       if (response.data.correct) {
-        setConsoleOutput(answer);  // Display the user's code in the console
-        fetchQuestion();           // Fetch a new question if the answer is correct
+        setConsoleOutput(answer);
+        fetchQuestion();  // Fetch a new question if the answer is correct
       } else {
-        setConsoleOutput('');      // Clear the console if the answer is wrong
+        setConsoleOutput('');
       }
     } catch (error) {
       console.error('Error checking answer:', error);
+      setError('Failed to check the answer. Please try again.');
     }
   };
 
-  // Load the first question when the app starts
   useEffect(() => {
-    fetchQuestion();  // Fetch a question when the component mounts
+    fetchQuestion();
   }, []);
 
   return (
@@ -64,6 +67,8 @@ function App() {
 
       {loading ? (
         <p style={{ fontSize: '28px', color: '#ea5455' }}>Loading question...</p>
+      ) : error ? (
+        <p style={{ fontSize: '28px', color: '#ea5455' }}>{error}</p>
       ) : (
         <div style={{ border: '2px solid #f76b8a', padding: '40px', borderRadius: '15px', backgroundColor: '#f9f9f9', boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)', position: 'relative' }}>
           
@@ -71,12 +76,13 @@ function App() {
           <LessonBox lesson={lesson} />
 
           {/* Code Editor and Console */}
-          <PrintlnVisual
-            answer={answer}
-            setAnswer={setAnswer}
-            consoleOutput={consoleOutput}
-            fontSize="20px"  // Pass fontSize prop if supported
-          />
+          <div className="editor-console-container">
+            <PrintlnVisual
+              answer={answer}
+              setAnswer={setAnswer}
+              consoleOutput={consoleOutput}
+            />
+          </div>
 
           {/* Feedback */}
           {feedback && (
@@ -111,12 +117,11 @@ function App() {
               Submit
             </button>
           </div>
-
         </div>
       )}
     </div>
   );
 }
 
-export default App;
+export default AIapp;
 
