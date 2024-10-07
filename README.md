@@ -1,5 +1,7 @@
 # SASEhack-WebWizard
 
+Video link: https://youtu.be/DeiGEz07Dcg
+
 How to run
 1. cd game
 2. npm install 
