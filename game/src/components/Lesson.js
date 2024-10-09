@@ -30,7 +30,7 @@ const Lesson = () => {
     }
   };
 
-  // Check the user's answer
+  // user answer
   const checkAnswer = async () => {
     try {
       const response = await axios.post('http://localhost:5001/api/check-answer', {
@@ -51,13 +51,12 @@ const Lesson = () => {
     }
   };
 
-  // Load the first question when the component mounts
+  // compent mount
   useEffect(() => {
     fetchQuestion();
   }, []);
 
-  console.log('Props being passed:', { answer, setAnswer, consoleOutput });  // Add this log
-
+  console.log('Props being passed:', { answer, setAnswer, consoleOutput });  //you got to add this log no matter what
   return (
     <div className="Lesson" style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
       <h2>Java Coding Practice</h2>
