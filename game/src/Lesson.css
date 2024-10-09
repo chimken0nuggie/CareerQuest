@@ -1,0 +1,22 @@
+.lesson-box {
+    border: 2px solid #007bff; /* Blue border */
+    border-radius: 10px;       /* Rounded corners */
+    padding: 20px;             /* Space inside the box */
+    background-color: #f9f9f9; /* Light grey background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    margin: 20px 0;            /* Space around the box */
+    font-family: 'Arial', sans-serif; /* Font family */
+}
+
+.lesson-box h3 {
+    color: #007bff;            /* Blue text color for the heading */
+    margin-bottom: 10px;       /* Space below the heading */
+}
+
+.lesson-box p {
+    font-size: 16px;           /* Font size for the paragraph */
+    color: #333;               /* Dark grey text color */
+}
+
+
+
